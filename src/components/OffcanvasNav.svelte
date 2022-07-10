@@ -10,7 +10,10 @@
       <NavLink href="#/">Home</NavLink>
     </NavItem>
     <NavItem>
-      <NavLink active href="#/book/">Books</NavLink>
+      <NavLink href="#/book/">Books</NavLink>
+    </NavItem>
+    <NavItem>
+      <NavLink href="#/editbook/">Edit Book</NavLink>
     </NavItem>
   </Nav>
 </Offcanvas>

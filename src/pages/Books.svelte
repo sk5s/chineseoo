@@ -20,6 +20,6 @@
 
   <h1>Notebooks</h1>
 
-  <NoteBooksList {notebooks} />
+  <NoteBooksList bind:notebooks />
 
 </div>

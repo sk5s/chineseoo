@@ -1,5 +1,5 @@
 <script>
-  import { ListGroup, ListGroupItem, Input, Nav, NavItem, Button } from 'sveltestrap'
+  import { ListGroup, ListGroupItem, Input, Nav, NavItem, Button, Alert, ButtonGroup } from 'sveltestrap'
   import CountText from './CountText.svelte'
   import { createEventDispatcher } from 'svelte'
   export let notebooks = []
@@ -26,13 +26,19 @@
       })
     })
     actionlist = []
-    location.reload()
+    // location.reload()
+  }
+  const viewBooks = () => {
+    location.hash = "#/book/"
   }
 </script>
 
 <Nav class="justify-content-end">
   <NavItem>
-    <Button color="primary" disabled={actionlist.length == 0} on:click={deleteSelection} >Delete</Button>
+    <ButtonGroup>
+      <Button color="primary" on:click={viewBooks} ><i class="fa-solid fa-eye"></i> View Books</Button>
+      <Button color="primary" disabled={actionlist.length == 0} on:click={deleteSelection} ><i class="fa-solid fa-pen-to-square"></i> Delete</Button>
+    </ButtonGroup>
   </NavItem>
 </Nav>
 
@@ -49,4 +55,6 @@
 
 {#if count != 0}
   <CountText {count} />
+{:else}
+  <Alert color="warning">Add Book First</Alert>
 {/if}

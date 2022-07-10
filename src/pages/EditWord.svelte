@@ -1,8 +1,9 @@
 <script>
-  import BookSelect from "../components/BookSelect.svelte"
+  import EditableWordsList from "../components/EditableWordsList.svelte"
   import TopNavbar from "../components/TopNavbar.svelte"
   import { Breadcrumb, BreadcrumbItem } from "sveltestrap"
   export let notebooks = []
+  export let hashParam = ""
 </script>
 
 <TopNavbar />
@@ -13,10 +14,9 @@
       <a href="#/">Home</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
-      Add Item
+      Edit Word
     </BreadcrumbItem>
   </Breadcrumb>
-  
-  <h1>Add Item To Book</h1>
-  <BookSelect bind:notebooks redirect_path="#/additem/" />
+
+  <EditableWordsList bind:hashParam bind:notebooks on:chineseoo_delete_a_word on:chineseoo_move_one_word_up />
 </div>

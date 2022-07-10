@@ -17,5 +17,5 @@
     </BreadcrumbItem>
   </Breadcrumb>
 
-  <EditableNoteBooksList {notebooks} on:chineseoo_delete_a_book />
+  <EditableNoteBooksList bind:notebooks on:chineseoo_delete_a_book />
 </div>

@@ -13,10 +13,10 @@
       <a href="#/">Home</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
-      Add Item
+      Edit Word
     </BreadcrumbItem>
   </Breadcrumb>
   
-  <h1>Add Item To Book</h1>
-  <BookSelect bind:notebooks redirect_path="#/additem/" />
+  <h1>Edit Word</h1>
+  <BookSelect {notebooks} redirect_path="#/editword/" />
 </div>

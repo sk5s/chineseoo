@@ -1,6 +1,6 @@
 <script>
-  import { ListGroup, ListGroupItem } from 'sveltestrap'
-  import CountText from './CountText.svelte';
+  import { ListGroup, ListGroupItem, Alert } from 'sveltestrap'
+  import CountText from './CountText.svelte'
   export let notebook = {}
   console.log(notebook)
   let book_data = notebook.data
@@ -22,4 +22,6 @@
 
 {#if count != 0}
   <CountText {count} />
+{:else}
+  <Alert color="warning">Add Words First</Alert>
 {/if}
