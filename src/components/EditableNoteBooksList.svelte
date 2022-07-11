@@ -26,7 +26,7 @@
       })
     })
     actionlist = []
-    // location.reload()
+    location.reload()
   }
   const viewBooks = () => {
     location.hash = "#/book/"
